@@ -9,6 +9,13 @@ export default new Router({
     },
     routes: [
 
+        {   
+            path: '/mind/comum',
+            name: 'Categoria',
+            component: () => import('../pages/comum/TabelaPage.vue'),
+            props: { table: 'Categoria' }
+        },
+
         {
             path: '/condominio/cap/auth',
             name: 'auth-login',

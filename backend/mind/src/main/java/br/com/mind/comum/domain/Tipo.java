@@ -19,7 +19,8 @@ import lombok.Setter;
 @Entity
 @Table( name = "tb_tipo", schema = "db_mind" )
 public class Tipo extends Tabela {
-
+	private static final long serialVersionUID = 3709890179787936596L;
+	
 	@Column( name = "nm_tipo", length = 200 )
 	@Size( max = 200, message = "O campo nome do tipo passou o limite de tamanho." )
 	@NotBlank( message = "O campo nome do tipo e obrigatório." )

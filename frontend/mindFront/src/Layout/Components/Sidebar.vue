@@ -40,6 +40,12 @@
                     },
                     
                     {
+                        title: 'Categoria',
+                        icon:  'pe-7s-rocket',
+                        href: '/mind/comum'
+                    },
+
+                    {
                         header: true,
                         title: 'EXEMPLOS-Components',
                     },

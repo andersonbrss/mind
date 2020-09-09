@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import Service from '@/service/Service'
+import Service from '@/service/AbstractService'
 
 /**
  * @type {Api}
