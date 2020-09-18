@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import javax.transaction.Transactional;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,12 +15,12 @@ import org.springframework.stereotype.Service;
 import br.com.mind.comum.dao.CategoriaDao;
 import br.com.mind.comum.domain.Categoria;
 import br.com.mind.comum.service.CategoriaService;
-import br.com.mind.comum.util.Log;
 import br.com.mind.comum.validacao.Validar;
 
 @Service
 public class CategoriaServiceImpl implements CategoriaService {
-
+	private static final Logger Log = LogManager.getLogger( CategoriaService.class );
+	
 	private CategoriaDao dao;
 	
 	@Autowired
@@ -28,7 +30,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 
 	@Override
 	public ResponseEntity<Categoria> getObj(Long id) {
-		Log.info( "Start service categoriaServiceImpl method getObj: " + id );
+		Log.info( "Start service categoriaServiceImpl method getObj: {}", id );
 		
 		Optional< Categoria > categoria = dao.findById( id );
 		Validar.objectNotFound( categoria, id );
@@ -49,7 +51,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 	@Transactional
 	@Override
 	public ResponseEntity<Categoria> save(Categoria obj) {
-		Log.info( "Start service categoriaServiceImpl method save: " + obj );
+		Log.info( "Start service categoriaServiceImpl method save: {}", obj );
 		
 		obj = dao.save( obj );
 		Validar.objectNotId( obj );
@@ -60,7 +62,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 	@Override
 	@Transactional
 	public ResponseEntity<Categoria> update(Categoria obj) {
-		Log.info( "Start service categoriaServiceImpl method update: " + obj );
+		Log.info( "Start service categoriaServiceImpl method update: {}", obj );
 		
 		Validar.objectNotId( obj );
 		obj = dao.save( obj );
@@ -71,11 +73,11 @@ public class CategoriaServiceImpl implements CategoriaService {
 	@Override
 	@Transactional
 	public ResponseEntity<String> delete(Long id) {
-		Log.info( "Start service categoriaServiceImpl method delete: " + id );
+		Log.info( "Start service categoriaServiceImpl method delete: {}", id );
 		
 		dao.deleteById( id );
 		
-		return new ResponseEntity< String >( "Operação realizada com sucesso, objeto removido", HttpStatus.OK );
+		return new ResponseEntity< >( "Operação realizada com sucesso, objeto removido", HttpStatus.OK );
 	}
 
 }

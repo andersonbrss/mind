@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 
-public interface AbstractService< E > {
+import br.com.mind.comum.domain.Tabela;
+
+public interface AbstractService< E extends Tabela> {
 
 	ResponseEntity< E > getObj( Long id );
 	
