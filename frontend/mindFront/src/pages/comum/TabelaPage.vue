@@ -54,7 +54,7 @@
 import PageTitleComum from '../../Layout/Components/PageTitleComum.vue';
 import ModalComponent from '../components/ModalComponent';
 import TabelaComponent from '../components/TabelaComponent';
-import { confirmDialogObject,showError,showSuccess } from "@/global";
+import { confirmDialogObject, showError, showSuccess } from "@/global";
 
 import Categoria from './domain/Categoria';
 import service from '../comum/service/CategoriaService';
