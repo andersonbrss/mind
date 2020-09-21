@@ -21,7 +21,7 @@ import br.com.mind.comum.service.CategoriaService;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/categoria")
+@RequestMapping("/comum/categoria")
 public class CategoriaResource {
 	private static final Logger Log = LogManager.getLogger(CategoriaResource.class.getName());
 
@@ -33,35 +33,35 @@ public class CategoriaResource {
 	}
 	
 	@GetMapping
-	private ResponseEntity<List<Categoria>> getList() {
+	public ResponseEntity< List<Categoria> > getList() {
 		Log.info( "Start resource getList from categoria " );
 		
 		return service.getList();
 	}
 	
 	@GetMapping("/{id}")
-	private ResponseEntity<?> getCategoria( @PathVariable("id") Long id ) {
+	public ResponseEntity< Categoria > getCategoria( @PathVariable("id") Long id ) {
 		Log.info( "Start resource getCategoria from id categoria: {}", id );
 		
 		return service.getObj( id );
 	}
 	
 	@PostMapping
-	private ResponseEntity<?> save( @RequestBody Categoria categoria ) {
+	public ResponseEntity< Categoria > save( @RequestBody Categoria categoria ) {
 		Log.info( "Start resource save from categoria: {}", categoria );
 		
 		return service.save( categoria );
 	}
 	
 	@PutMapping
-	private ResponseEntity<?> update( @RequestBody Categoria categoria ) {
+	public ResponseEntity< Categoria > update( @RequestBody Categoria categoria ) {
 		Log.info( "Start resource update from categoria: {}", categoria );
 		
 		return service.update( categoria );
 	}
 	
 	@DeleteMapping("/{id}")
-	private ResponseEntity<String> delete( @PathVariable Long id ) {
+	public ResponseEntity< String > delete( @PathVariable Long id ) {
 		Log.info( "Start resouce delete from id categoria: {}", id );
 		
 		return service.delete( id );

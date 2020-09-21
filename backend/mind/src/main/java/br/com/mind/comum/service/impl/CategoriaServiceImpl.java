@@ -19,7 +19,7 @@ import br.com.mind.comum.validacao.Validar;
 
 @Service
 public class CategoriaServiceImpl implements CategoriaService {
-	private static final Logger Log = LogManager.getLogger( CategoriaService.class );
+	private static final Logger Log = LogManager.getLogger( CategoriaServiceImpl.class );
 	
 	private CategoriaDao dao;
 	
