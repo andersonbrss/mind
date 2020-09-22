@@ -51,13 +51,13 @@
 </template>
 
 <script>
-import PageTitleComum from '../../Layout/Components/PageTitleComum.vue';
-import ModalComponent from '../components/ModalComponent';
-import TabelaComponent from '../components/TabelaComponent';
+import PageTitleComum from '../../../Layout/Components/PageTitleComum.vue';
+import ModalComponent from '../../components/ModalComponent';
+import TabelaComponent from '../../components/TabelaComponent';
 import { confirmDialogObject, showError, showSuccess } from "@/global";
 
-import Categoria from './domain/Categoria';
-import service from '../comum/service/CategoriaService';
+import Categoria from './../domain/Categoria';
+import service from '../../comum/service/CategoriaService';
 
 export default {
     name: 'Categoria',

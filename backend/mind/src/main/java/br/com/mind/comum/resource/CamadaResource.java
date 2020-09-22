@@ -21,7 +21,7 @@ import br.com.mind.comum.service.CamadaService;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping( "/comum/camada" )
+@RequestMapping( "/comum/camadas" )
 public class CamadaResource {
 	private static final Logger Log = LogManager.getLogger( CamadaResource.class );
 	

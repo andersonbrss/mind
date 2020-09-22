@@ -7,7 +7,7 @@ export default class TipoDao extends Repository {
      * @param {*} options
      */
     constructor( options ) {
-        super( options, `${ urlApi }/comum/tipo` )
+        super( options, `${ urlApi }/comum/tipos` )
     }
 
 }

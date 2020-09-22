@@ -7,7 +7,7 @@ export default class CamadaDao extends Repository {
      * @param {*} options
      */
     constructor( options ) {
-        super( options, `${ urlApi }/comum/camada`)
+        super( options, `${ urlApi }/comum/camadas`)
     }
 
 }

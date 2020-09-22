@@ -42,7 +42,17 @@
                     {
                         title: 'Categoria',
                         icon:  'pe-7s-rocket',
-                        href: '/mind/comum'
+                        href: '/mind/comum/categoria'
+                    },
+                    {
+                        title: 'Camada',
+                        icon:  'pe-7s-rocket',
+                        href: '/mind/comum/camada'
+                    },
+                    {
+                        title: 'Tipo',
+                        icon:  'pe-7s-rocket',
+                        href: '/mind/comum/tipo'
                     },
 
                     {

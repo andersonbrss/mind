@@ -7,6 +7,6 @@ export default class CategoriaDao extends Repository {
      * @param {*} options
      */
     constructor( options ) {
-        super( options, `${ urlApi }/comum/categoria` )
+        super( options, `${ urlApi }/comum/categorias` )
     }
 }

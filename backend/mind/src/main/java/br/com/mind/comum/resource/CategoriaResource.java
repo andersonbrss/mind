@@ -21,7 +21,7 @@ import br.com.mind.comum.service.CategoriaService;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/comum/categoria")
+@RequestMapping("/comum/categorias")
 public class CategoriaResource {
 	private static final Logger Log = LogManager.getLogger(CategoriaResource.class.getName());
 

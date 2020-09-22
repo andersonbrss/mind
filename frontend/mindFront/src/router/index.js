@@ -10,12 +10,22 @@ export default new Router({
     routes: [
 
         {   
-            path: '/mind/comum',
+            path: '/mind/comum/categoria',
             name: 'Categoria',
-            component: () => import('../pages/comum/TabelaPage.vue'),
+            component: () => import('../pages/comum/pages/CategoriaPage.vue'),
             props: { table: 'Categoria' }
         },
 
+        {   
+            path: '/mind/comum/camada',
+            name: 'Camada',
+            component: () => import('../pages/comum/pages/CamadaPage.vue'),
+        },
+        {   
+            path: '/mind/comum/tipo',
+            name: 'Tipo',
+            component: () => import('../pages/comum/pages/TipoPage.vue'),
+        },
         {
             path: '/condominio/cap/auth',
             name: 'auth-login',
