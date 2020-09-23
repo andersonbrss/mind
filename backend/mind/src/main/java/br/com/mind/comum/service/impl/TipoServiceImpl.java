@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import br.com.mind.comum.dao.TipoDao;
 import br.com.mind.comum.domain.Tipo;
 import br.com.mind.comum.service.TipoService;
-import br.com.mind.comum.validacao.Validar;
+import br.com.mind.comum.util.Validar;
 
 @Service
 public class TipoServiceImpl implements TipoService {

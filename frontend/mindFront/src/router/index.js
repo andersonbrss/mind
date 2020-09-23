@@ -26,6 +26,11 @@ export default new Router({
             name: 'Tipo',
             component: () => import('../pages/comum/pages/TipoPage.vue'),
         },
+        {   
+            path: '/mind/comum/linguagem',
+            name: 'Linguagem',
+            component: () => import('../pages/comum/pages/LinguagemPage.vue'),
+        },
         {
             path: '/condominio/cap/auth',
             name: 'auth-login',

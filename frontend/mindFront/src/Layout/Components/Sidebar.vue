@@ -54,7 +54,11 @@
                         icon:  'pe-7s-rocket',
                         href: '/mind/comum/tipo'
                     },
-
+                    {
+                        title: 'Linguagem',
+                        icon:  'pe-7s-rocket',
+                        href: '/mind/comum/linguagem'
+                    },
                     {
                         header: true,
                         title: 'EXEMPLOS-Components',

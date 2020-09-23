@@ -1,4 +1,4 @@
-package br.com.mind.comum.validacao;
+package br.com.mind.comum.util;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,7 +6,6 @@ import java.util.Optional;
 import br.com.mind.comum.domain.Tabela;
 import br.com.mind.comum.exception.DataException;
 import br.com.mind.comum.exception.ObjectNotFoundException;
-import br.com.mind.comum.util.Log;
 
 public abstract class Validar {
 

@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import br.com.mind.comum.dao.CategoriaDao;
 import br.com.mind.comum.domain.Categoria;
 import br.com.mind.comum.service.CategoriaService;
-import br.com.mind.comum.validacao.Validar;
+import br.com.mind.comum.util.Validar;
 
 @Service
 public class CategoriaServiceImpl implements CategoriaService {

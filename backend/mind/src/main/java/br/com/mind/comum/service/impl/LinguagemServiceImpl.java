@@ -10,44 +10,44 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import br.com.mind.comum.dao.CamadaDao;
-import br.com.mind.comum.domain.Camada;
-import br.com.mind.comum.service.CamadaService;
+import br.com.mind.comum.dao.LinguagemDao;
+import br.com.mind.comum.domain.Linguagem;
+import br.com.mind.comum.service.LinguagemService;
 import br.com.mind.comum.util.Validar;
 
 @Service
-public class CamadaServiceImpl implements CamadaService {
-	private static final Logger Log  = LogManager.getLogger( CamadaServiceImpl.class );
+public class LinguagemServiceImpl implements LinguagemService {
+	private static final Logger Log = LogManager.getLogger( LinguagemServiceImpl.class );
 	
-	private CamadaDao dao;
+	private LinguagemDao dao;
 	
 	@Autowired
-	public CamadaServiceImpl( CamadaDao dao ) {
+	public LinguagemServiceImpl( LinguagemDao dao ) {
 		this.dao = dao;
 	}
-
+	
 	@Override
-	public ResponseEntity<Camada> getObj(Long id) {
+	public ResponseEntity<Linguagem> getObj(Long id) {
 		Log.info( "Start service getObj, {}", id );
 		
-		Optional< Camada > obj = dao.findById( id );
+		Optional< Linguagem > obj = dao.findById( id );
 		Validar.objectNotFound( obj, id );
 		
 		return new ResponseEntity<>( obj.get(), HttpStatus.OK );
 	}
 
 	@Override
-	public ResponseEntity<List<Camada>> getList() {
-		Log.info( "Start service getList " );
+	public ResponseEntity<List<Linguagem>> getList() {
+		Log.info( "Start service getList" );
 		
-		List<Camada> camadaList = dao.findAll();
-		Validar.objectListNotFound( camadaList );
+		List< Linguagem > list =  dao.findAll();
+		Validar.objectListNotFound( list );
 		
-		return new ResponseEntity< >( camadaList, HttpStatus.OK );
+		return new ResponseEntity<>( list, HttpStatus.OK );
 	}
 
 	@Override
-	public ResponseEntity<Camada> save(Camada obj) {
+	public ResponseEntity<Linguagem> save(Linguagem obj) {
 		Log.info( "Start service save, {}", obj );
 		
 		obj = dao.save( obj );
@@ -57,11 +57,11 @@ public class CamadaServiceImpl implements CamadaService {
 	}
 
 	@Override
-	public ResponseEntity<Camada> update(Camada obj) {
+	public ResponseEntity<Linguagem> update(Linguagem obj) {
 		Log.info( "Start service update, {}", obj );
 		
 		Validar.objectNotId( obj );
-		dao.save( obj );
+		obj = dao.save( obj );
 		
 		return new ResponseEntity<>( obj, HttpStatus.OK );
 	}
@@ -72,7 +72,7 @@ public class CamadaServiceImpl implements CamadaService {
 		
 		dao.deleteById( id );
 		
-		return new ResponseEntity<>( "Operação realizada com sucesso, registro removido.", HttpStatus.OK );
+		return new ResponseEntity<>( "Registro removido com sucesso.", HttpStatus.OK );
 	}
 
 }
