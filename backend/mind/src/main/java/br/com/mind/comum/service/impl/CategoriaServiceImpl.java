@@ -35,7 +35,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 		Optional< Categoria > categoria = dao.findById( id );
 		Validar.objectNotFound( categoria, id );
 		
-		return new ResponseEntity< Categoria >(categoria.get(), HttpStatus.OK);
+		return new ResponseEntity< >( categoria.get(), HttpStatus.OK );
 	}
 
 	@Override
@@ -45,7 +45,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 		List< Categoria > categoriaList = dao.findAll();
 		Validar.objectListNotFound( categoriaList );
 		
-		return new ResponseEntity< List< Categoria >>( categoriaList, HttpStatus.OK );
+		return new ResponseEntity< >( categoriaList, HttpStatus.OK );
 	}
 
 	@Transactional
@@ -56,7 +56,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 		obj = dao.save( obj );
 		Validar.objectNotId( obj );
 		
-		return new ResponseEntity< Categoria >( obj, HttpStatus.OK );
+		return new ResponseEntity< >( obj, HttpStatus.OK );
 	}
 
 	@Override
@@ -67,7 +67,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 		Validar.objectNotId( obj );
 		obj = dao.save( obj );
 		
-		return new ResponseEntity< Categoria >( obj, HttpStatus.OK );
+		return new ResponseEntity< >( obj, HttpStatus.OK );
 	}
 
 	@Override
